@@ -11,7 +11,8 @@ namespace Basic_Exercises
             //SpecOps();
             //Swap();
             //MultThree();
-            AllOps();
+            //AllOps();
+            Multable();
         }
 
 
@@ -133,7 +134,7 @@ namespace Basic_Exercises
             Console.WriteLine($"{fst} / {snd} = {fst / snd}");
             Console.WriteLine($"{fst} mod {snd} = {fst % snd}");
         }
-        
+
         /*
         8. Write a C# Sharp program that takes a number as input and print its multiplication table. Go to the editor
         Test Data:
@@ -145,8 +146,16 @@ namespace Basic_Exercises
         5 * 3 = 15
         ....
         5 * 10 = 50
-        *//*
+        */
+        static void Multable() {
+            Console.WriteLine("Enter a number: ");
+            int input = int.Parse(Console.ReadLine());
+            for (int i=0; i<100; i++){
+                Console.WriteLine($"{input} * {i} = {input * i}");
+            }
+        }
 
+        /*
         9. Write a C# Sharp program that takes four numbers as input to calculate and print the average. Go to the editor
         Test Data:
         Enter the First number: 10
