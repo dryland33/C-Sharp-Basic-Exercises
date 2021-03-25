@@ -14,7 +14,8 @@ namespace Basic_Exercises
             //MultThree();
             //AllOps();
             //Multable();
-            Average();
+            //Average();
+            SillyMath();
         }
 
 
@@ -177,7 +178,7 @@ namespace Basic_Exercises
             }
             Console.WriteLine($"The average of {numbers[0]}, {numbers[1]}, {numbers[2]}, {numbers[3]} is: {(double)numbers.Sum()/4}");
         }
-        
+
         /*
         10. Write a C# Sharp program to that takes three numbers(x,y,z) as input and print the output of (x+y).z and x.y + y.z. Go to the editor
         Test Data:
@@ -187,8 +188,19 @@ namespace Basic_Exercises
 
         Expected Output:
         Result of specified numbers 5, 6 and 7, (x+y).z is 77 and x.y + y.z is 72
-        *//*
+        */
+        static void SillyMath() {
+            int first, second, third;
+            Console.Write("\nEnter the first number: ");
+            first = int.Parse(Console.ReadLine());
+            Console.Write("\nEnter the second number: ");
+            second = int.Parse(Console.ReadLine());
+            Console.Write("\nEnter the third number: ");
+            third = int.Parse(Console.ReadLine());
+            Console.WriteLine($"\n(first + second) x third = {(first + second) * third} and first x second + second x third = {first * second + second * third}");
+        }
 
+        /*
         11. Write a C# Sharp program that takes an age (for example 20) as input and prints something as "You look older than 20". Go to the editor
         Test Data:
         Enter your age - 25
