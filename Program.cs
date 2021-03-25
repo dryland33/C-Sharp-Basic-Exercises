@@ -7,7 +7,8 @@ namespace Basic_Exercises
         static void Main(string[] args) {
             SayHello();
             //SumTwo();
-            DivideTwo();
+            //DivideTwo();
+            SpecOps();
         }
 
 
@@ -18,7 +19,8 @@ namespace Basic_Exercises
         Hello: Alexandra Abramov
         */
         public static void SayHello() {
-            Console.Write("Hello: Rylan Wassem");
+            Console.WriteLine("Hello: ");
+            Console.WriteLine("Rylan Wassem");
         }
 
 
@@ -35,7 +37,6 @@ namespace Basic_Exercises
         
         /*
         3. Write a C# Sharp program to print the result of dividing two numbers. Go to the editor
-        Click me to see the solution
         */
         public static void DivideTwo() {
             Console.Write("\n\nEnter the first number: ");
@@ -44,7 +45,7 @@ namespace Basic_Exercises
             double second_num = double.Parse(Console.ReadLine());
             Console.Write($"\n{first_num} divided by {second_num} is {first_num / second_num}\n");
         }
-        
+
         /*
         4. Write a C# Sharp program to print the result of the specified operations. Go to the editor
         Test data:
@@ -58,8 +59,14 @@ namespace Basic_Exercises
         5
         12
         3
-        Click me to see the solution
-
+        */
+        static void SpecOps() {
+            Console.WriteLine(-1 + 4 * 6);
+            Console.WriteLine((35 + 5) % 7);
+            Console.WriteLine(14 + -4 * 6 / 11);
+            Console.WriteLine(2 + 15 / 6 * 1 - 7 % 2);
+        }
+        /*
         5. Write a C# Sharp program to swap two numbers. Go to the editor
         Test Data:
         Input the First Number : 5
