@@ -10,7 +10,8 @@ namespace Basic_Exercises
             //DivideTwo();
             //SpecOps();
             //Swap();
-            MultThree();
+            //MultThree();
+            AllOps();
         }
 
 
@@ -109,7 +110,8 @@ namespace Basic_Exercises
         }
 
         /*
-        7. Write a C# Sharp program to print on screen the output of adding, subtracting, multiplying and dividing of two numbers which will be entered by the user. Go to the editor
+        7. Write a C# Sharp program to print on screen the output of adding, subtracting, multiplying and dividing 
+        of two numbers which will be entered by the user. Go to the editor
         Test Data:
         Input the first number: 25
         Input the second number: 4
@@ -119,8 +121,20 @@ namespace Basic_Exercises
         25 x 4 = 100
         25 / 4 = 6
         25 mod 4 = 1
-       *//*
-
+       */
+        static void AllOps() {
+            Console.WriteLine("Input the first number: ");
+            int fst = int.Parse(Console.ReadLine());
+            Console.WriteLine("Input the second number: ");
+            int snd = int.Parse(Console.ReadLine());
+            Console.WriteLine($"{fst} + {snd} = {fst + snd}");
+            Console.WriteLine($"{fst} - {snd} = {fst - snd}");
+            Console.WriteLine($"{fst} x {snd} = {fst * snd}");
+            Console.WriteLine($"{fst} / {snd} = {fst / snd}");
+            Console.WriteLine($"{fst} mod {snd} = {fst % snd}");
+        }
+        
+        /*
         8. Write a C# Sharp program that takes a number as input and print its multiplication table. Go to the editor
         Test Data:
         Enter the number: 5
