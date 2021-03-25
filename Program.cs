@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace Basic_Exercises
 {
@@ -12,7 +13,8 @@ namespace Basic_Exercises
             //Swap();
             //MultThree();
             //AllOps();
-            Multable();
+            //Multable();
+            Average();
         }
 
 
@@ -158,15 +160,25 @@ namespace Basic_Exercises
         /*
         9. Write a C# Sharp program that takes four numbers as input to calculate and print the average. Go to the editor
         Test Data:
-        Enter the First number: 10
-        Enter the Second number: 15
+        Enter the first number: 10
+        Enter the second number: 15
         Enter the third number: 20
-        Enter the four number: 30
+        Enter the fourth number: 30
 
         Expected Output:
         The average of 10 , 15 , 20 , 30 is: 18
-        *//*
-
+        */
+        static void Average() {
+            string[] names = { "first", "second", "third", "fourth" };
+            int[] numbers = new int[4];
+            for (int i = 0; i < 4; i++) {
+                Console.WriteLine("Enter the " + names[i] + " number: ");
+                numbers[i] = int.Parse(Console.ReadLine());
+            }
+            Console.WriteLine($"The average of {numbers[0]}, {numbers[1]}, {numbers[2]}, {numbers[3]} is: {(double)numbers.Sum()/4}");
+        }
+        
+        /*
         10. Write a C# Sharp program to that takes three numbers(x,y,z) as input and print the output of (x+y).z and x.y + y.z. Go to the editor
         Test Data:
         Enter first number - 5
