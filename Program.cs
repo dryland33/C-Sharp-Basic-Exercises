@@ -105,6 +105,7 @@ namespace Basic_Exercises
             int snd = int.Parse(Console.ReadLine());
             Console.WriteLine("Input the third number to multiply: ");
             int trd = int.Parse(Console.ReadLine());
+            Console.WriteLine($"{fst} x {snd} x {trd} = {fst * snd * trd}");
         }
 
         /*
