@@ -18,7 +18,9 @@ namespace Basic_Exercises
             //SillyMath();
             //AgeInsulter();
             //DisplayDigit();
-            RectNum();
+            //RectNum();
+            //TempConv();
+            DelChar();
         }
 
 
@@ -267,8 +269,17 @@ namespace Basic_Exercises
         Expected Output:
         Kelvin = 303
         Fahrenheit = 86
-        *//*
+        */
+        static void TempConv() {
+            Console.WriteLine("Enter degrees celsius: ");
+            string input = Console.ReadLine();
+            if (double.TryParse(input, out double result)) {
+                Console.WriteLine($"Kelvin = {result + 273}");
+                Console.WriteLine($"Fahrenheit = {1.8*result+32}");
+            }
+        }
 
+        /*
         15. Write a C# program remove specified a character from a non-empty string using index of a character. Go to the editor
         Test Data:
         w3resource
@@ -276,8 +287,35 @@ namespace Basic_Exercises
         wresource
         w3resourc
         3resource
-        *//*
+        */
+        static void DelChar() {
 
+            Console.Write("Enter a some text: ");
+            string text = Console.ReadLine();
+
+            Console.WriteLine("Which character should I remove?");
+            char toREm = Console.ReadLine().First();
+
+            Console.WriteLine("Should I remove all instances? Y/N");
+            char resp = Console.ReadLine().First();
+
+            if (resp == 'N' || resp == 'n') 
+            {
+                if (text.Contains(toREm)) 
+                    text = text.Remove(text.IndexOf(toREm), 1);
+            } 
+            else if (resp == 'Y' || resp == 'y') 
+            {
+                for (int i = text.Length - 1; i > 0; i--) {
+                    if (text.Contains(toREm))
+                        text = text.Remove(text.IndexOf(toREm), 1);
+                }
+            }
+
+            Console.WriteLine($"The text with the character deleted is: {text}");
+        }
+
+        /*
         16. Write a C# program to create a new string from a given string where the first and last characters will change their positions. Go to the editor
         Test Data:
         w3resource
