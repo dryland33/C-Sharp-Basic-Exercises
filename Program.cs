@@ -20,7 +20,8 @@ namespace Basic_Exercises
             //DisplayDigit();
             //RectNum();
             //TempConv();
-            DelChar();
+            //DelChar();
+            LetSwap();
         }
 
 
@@ -300,7 +301,7 @@ namespace Basic_Exercises
             char resp = Console.ReadLine().First();
 
             if (resp == 'N' || resp == 'n') 
-            {
+            {//Remove() will cause an out of range exception if the character isn't in the string.
                 if (text.Contains(toREm)) 
                     text = text.Remove(text.IndexOf(toREm), 1);
             } 
@@ -323,15 +324,27 @@ namespace Basic_Exercises
         Sample Output:
         e3resourcw
         nythoP
-        x
-        *//*
+        */
+        static void LetSwap() {
+            Console.Write("Enter some text: ");
+            string text = Console.ReadLine();
+            char first = text.First();
+            char last = text.Last();
+            text = text.Remove(0, 1);
+            text = text.Remove(text.Length -1, 1);
+            text += first;
+            text = last + text;
+            Console.Write($"With the first and last reversed: {text}");
+        }
 
+        /*
         17. Write a C# program to create a new string from a given string (length 1 or more ) with the first character added at the front and back. Go to the editor
         Sample Output:
         Input a string : The quick brown fox jumps over the lazy dog.
         TThe quick brown fox jumps over the lazy dog.T
-        *//*
-
+        */
+        
+        /*
         18. Write a C# program to check two given integers and return true if one is negative and one is positive. Go to the editor
         Sample Output:
         Input first integer:
