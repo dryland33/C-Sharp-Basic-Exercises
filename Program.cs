@@ -15,7 +15,10 @@ namespace Basic_Exercises
             //AllOps();
             //Multable();
             //Average();
-            SillyMath();
+            //SillyMath();
+            //AgeInsulter();
+            //DisplayDigit();
+            RectNum();
         }
 
 
@@ -206,9 +209,16 @@ namespace Basic_Exercises
         Enter your age - 25
         Expected Output:
         You look older than 25
-        *//*
+        */
+        static void AgeInsulter() {
+            Console.WriteLine("How old are you?");
+            string age = Console.ReadLine();
+            Console.WriteLine($"Wow! You're awfully ugly for {age}.");
+        }
 
-        12. Write a C# program to that takes a number as input and display it four times in a row (separated by blank spaces), and then four times in the next row, with no separation. You should do it two times: Use Console. Write and then use {0}. Go to the editor
+        /*
+        12. Write a C# program to that takes a number as input and display it four times in a row (separated by blank spaces), 
+        and then four times in the next row, with no separation. You should do it two times: Use Console. Write and then use {0}. Go to the editor
         Test Data:
         Enter a digit: 25
         Expected Output:
@@ -216,8 +226,16 @@ namespace Basic_Exercises
         25252525
         25 25 25 25
         25252525
-        *//*
+        */
+        static void DisplayDigit() {
+            Console.WriteLine("Please enter a whole number.");
+            string input = Console.ReadLine();
+            if (uint.TryParse(input, out uint result)) {
+                Console.Write($"{result} {result} {result} {result}\n{result}{result}{result}{result}\n{result} {result} {result} {result}\n{result}{result}{result}{result}\n");
+            }
+        }
 
+        /*
         13. Write a C# program that takes a number as input and then displays a rectangle of 3 columns wide and 5 rows tall using that digit. Go to the editor
         Test Data:
         Enter a number: 5
@@ -227,8 +245,22 @@ namespace Basic_Exercises
         5 5
         5 5
         555
-        *//*
+        */
+        static void RectNum() {
+            Console.WriteLine("Please enter a whole number.");
+            string input = Console.ReadLine();
+            if (uint.TryParse(input, out uint result)) {
+                int num_spaces = input.Length;
+                string spaces = "";
+                for (int i = 0; i < num_spaces; i++) {
+                    spaces += " ";
+                }
+                Console.Write($"{result}{result}{result}\n{result}" + spaces + $"{result}\n{result}" + 
+                    spaces + $"{result}\n{result}" + spaces + $"{result}\n{result}{result}{result}\n");
+            }
+        }
 
+        /*
         14. Write a C# program to convert from celsius degrees to Kelvin and Fahrenheit. Go to the editor
         Test Data:
         Enter the amount of celsius: 30
